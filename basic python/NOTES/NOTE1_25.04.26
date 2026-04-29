@@ -1,0 +1,3959 @@
+literal/constant/data
+___________________________
+integer       10,-5,57
+floating ponit/real   3.5,-4.7
+string               'a' "a"   '''a''' """a"""  "123"
+bool                  True  False
+complex              3+2j  4-5j
+
+5
+5.0
+'5'
+"5"
+5+0j
+
+
+print(): it is predefined function.
+it is used display output
+
+#wap display any integer real  and string
+
+print(5)
+print(7.8)
+print("hi")
+
+
+escape  sequence
+_____________________
+\n
+\t
+\b
+\r
+\\
+
+
+
+#wap display any integer real  and string
+print(10,3.7,"hi")
+
+by default
+________________
+print(sep=" ",end="\n")
+
+
+
+
+print("hi\nram")
+
+o/p:
+hi
+ram
+
+print("hi\tram")
+o/p:
+hi   ram
+
+
+
+print("hi\bram") #hram
+print("hi\b\bram") #ram
+print("hi\rram") #ram
+print("hello\bindia") #hellindia
+print("hello\rindia") #ind
+
+
+identifier
+______________
+it is user defined word.
+This word is used to give name of the variable clasname ,.....
+
+rule
+______
+(1)it consist of
+ a to z
+A to Z
+0 to 9
+_
+
+(2)not start with digit
+
+(3)space not allow
+(4)case senistive  a!=A
+(5) predefined word not allow
+
+import keyword
+print(len(keyword.kwlist))
+print(keyword.kwlist)
+
+35
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+
+identify the identifier
+________________________
+abd   v 
+aBd   v
+a3    v
+3a    iv
+a$B   iv
+a_b    v
+_ab   v
+a b    iv
+if     iv
+IF     v  (not recommand)
+
+
+datatype:
+it tell the compiler your variable store which type data
+
+inbulit datatype
+______________________ (immutable)
+int
+float
+str
+bool
+complex
+
+other datatype
+_______________
+list
+tuple
+set
+dict
+
+
+variable:
+it is memeory location name.
+where store and retrive data.
+
+How to initize variable in c c++ java
+_____________________________________________
+datatype variablename;
+varaiablename=literal;
+
+
+in python
+______________
+variablename=literal
+a=10
+b=2.5
+
+
+
+a=10
+b=2.5
+print(a,b)
+
+
+type():
+it is predefined function.it is used check your variable or literal which type.
+a=10
+b=2.5
+c="hi"
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(True))
+
+<class 'int'>
+<class 'float'>
+<class 'str'>
+<class 'bool'>
+
+id():it is predeined function .it is used to show refernce or address variable, literal.
+
+a=10
+b=2.5
+print(id(a),a)
+print(id(b),b)
+
+140720976300760 10
+2000900959344 2.5
+
+
+single line intlization
+____________________________
+a=10
+b=2.5
+c="hi"
+
+or
+
+a,b,c=10,2.5,"hi"
+print(a,b,c)
+
+
+o/p:
+10 2.5 hi
+
+
+a=10,2.5,"hi"
+print(type(a),a)
+
+o/p:
+<class 'tuple'> (10, 2.5, 'hi')
+
+
+grammer
+_______________
+a=10
+print("hi ram")
+print("a")
+print(a)
+
+
+
+o/p:
+hi ram
+a
+10
+
+
+a=20
+print("a")
+print(a)
+print("a+3")
+print(a+3)
+
+
+o/p:
+a
+20
+a+3
+23
+
+
+
+a=10
+b=20
+print("first no=",a)
+print("second no=",b)
+print("add=",a+b)
+print("mult=",a*b)
+
+o/p:
+first no=10
+second no=20
+add=30
+mult=200
+
+
+
+or
+a=10
+b=20
+print("first no=",a)
+print("second no=",b)
+s=a+b
+print("add=",s)
+m=a*b
+print("mult=",m)
+
+
+
+
+
+
+print("enter two nos ")
+a=int(input())
+b=int(input())
+print("first no=",a)
+print("second no=",b)
+s=a+b
+print("add=",s)
+m=a*b
+print("mult=",m)
+
+
+o/p:
+
+#wap take square side formkeyboad dsipaly side area and perimeter
+print("enter square side ")
+s=int(input())
+ar=s*s
+pr=4*s
+print("side=",s)
+print("area=",ar)
+print("perimter=",pr)
+
+o/p:
+enter square side
+5
+side=5
+area=25
+perimeter=20
+
+
+
+
+wap take a student 4 mark from keyboad dispaly all mark
+totalmark and avaerage mark
+print("enter mark1")
+m1=int(input())
+print("enter mark2")
+m2=int(input())
+print("enter mark3")
+m3=int(input())
+print("enter mark4")
+m4=int(input())
+total=m1+m2+m3+m4
+avg=total/4
+print("mark1=",m1)
+print("mark2=",m2)
+print("mark3=",m3)
+print("mark4=",m4)
+print("total=",total)
+print("avg mark=",avg)
+
+
+o/p:
+enter mark1
+90
+enter mark2
+80
+enter mark3
+70
+enter mark4
+80
+mark1=90
+mark2=80
+mark3=70
+mark4=80
+total mark=
+avg=
+
+wap take circle radius from keyboad display radius area and perimetr
+
+
+convert to f  to c
+
+conver c to f
+
+wap find the simple interset
+
+wap take emp sarly from keyboad  da=30% hra=20% then
+display basic sal da hra and total sal
+
+
+
+
+operator
+_______________
+operator is a symbole that operate the operand
+operand may be variable constant and expression
+
+unary operator : it operate one operand  -5
+binary operator  it operate two operand  a+b  5*6
+ternary operator  no avaliable  
+
+arithmetic operator
+__________________
+**   power               10**3  1000
+/    excatly division   10/3    3.33333   
+//   floor division      10//3   3
+%     modules (remainder)  10%3  1
+*      mult                 10*3  30
++     plus                  10+3  13
+-     minus                 10-3   7
+
+
+    operator      precdence     assoictive
+    **              2            R to L
+    * //  % /       3            L to R
+    +  -            4            L to R
+
+  L to R
+
+  10*2*3  
+  20*3
+  60
+
+  10//2*4
+  5*4
+  20
+
+
+  10*4//3
+  40//3
+  13
+
+  r to L
+  2**3**2
+  2**9
+  512
+
+
+
+
+display first digit
+
+1258//1000 1
+369//100  3
+45//10   4
+78//10   7
+
+display last digit
+1258%10 8
+369%10  9
+45%10   5
+78%10   8
+
+
+
+delete last digit
+1258//10    125
+369//10  36
+45//10   4
+78//10   7
+
+assginment operator
+______________________
+
+variable=variable/constant/expression;
+a=10
+b=a;
+a=b+3
+
+10=a   invalid
+10=20  
+
+swapping two number using 3rd variable 
+
+a=10
+b=20
+print("before swapping a=",a,"b=",b)
+temp=a;
+a=b;
+b=temp;
+print("after swapping a=",a,"b=",b)
+
+
+swapping two number without using  3rd variable 
+
+a=10
+b=20
+print("before swapping a=",a,"b=",b)
+a=a+b
+b=a-b;
+a=a-b;
+print("after swapping a=",a,"b=",b)
+
+
+
+
+a=14
+print(a+3)
+a=a//2
+print(a+5)
+print(a)
+o/p:
+17
+12
+7
+
+
+
+
+
+unary + -  operator
+_______________________
+a=5
+b=-a
+print(a,b)
+
+o/p:
+5 -5
+
+
+
+add two no without plus operator
+__________________________________
+a=10
+b=7
+c=a - -b
+print(c)
+
+increment and decrement operator not avaliable in python
+____________________________________________________________
+++
+--
+
+
+a=5
+++a
+print(a)
+
+o/p:
+5
+
+
+a=1
+a=a+1
+print(a)
+
+o/p:
+2
+
+
+
+
+
+a=1
+a+=1    # a=a+1
+print(a)
+o/p:
+2
+
+
+a=1
+++a;
+print(a)
+o/p:
+1   
+
+relation operator
+<
+>
+<=
+>=
+==
+!=
+is
+is not
+in 
+not in
+
+
+2<3  True
+2<3<7  True
+2<10<7  False
+
+2>3   False
+4>2   True
+10>4>2 True
+
+3==3   True
+3==4    False
+3!=4    True
+
+True==True True
+
+2<3==3<4   True
+
+2<3==5<6   False
+
+
+
+logical or short circut operator
+_________________________________
+combine two realtion operator
+or   
+and 
+not
+
+    or   
+op1     op2      result
+True    True      True
+True    False     True
+False    True     True
+False    False     False
+
+print(True or False)  #True
+
+if first operand is true  second operand not checking.
+if first operand  is false  second operand must checking
+any nonzero value    true 
+
+3 or 5    3  print(3 or 5)
+0 or  5   5
+3 or 0    3
+0 or 0    0
+
+a=3 
+b=5
+print(a>2 or b>9) 
+print(a<2 or b>9) 
+print(a>2 or b<9) 
+print(a<2 or b<9) 
+o/p:
+True
+False
+True
+True
+
+
+and
+op1     op2      result
+True    True      True
+True    False     False
+False    True     False
+False    False     False
+
+print(True and False)  #False
+
+if first operand is true  second operand must checking.
+if first operand  is false  second operand not checking
+any nonzero value    True 
+
+3 and 5    5
+0 and  5   0
+3 and 0    0
+0 and 0    0
+
+a=3 
+b=5
+print(a>2 and b>9) 
+print(a<2 and b>9) 
+print(a>2 and b<9) 
+
+o/p:
+False
+False
+True
+
+
+
+
+
+not 
+____
+
+
+operand   resulet
+
+True       False
+False       True
+
+
+not True    False
+not False   True
+
+print(not True)
+print(not False)
+print( not 5)
+print(not not 5)
+
+o/p:
+
+False
+True
+False
+True
+
+
+identity operator
+____________________
+is      compare reference
+is not
+
+==    compare value
+
+a=10
+b=10
+c=20
+print(a is b)
+print(a is c)
+print(a is not c)
+print(a==b)
+
+
+
+
+o/p:
+True
+False
+True
+True
+
+a=[10]
+b=[10]
+c=[20]
+print(a is b)
+print(a is c)
+print(a is not c)
+print(a==b)
+
+
+o/p:
+False
+False
+True
+True
+
+
+membership operator (in ,not in)
+
+print("n" in "india")  #True
+print("ndi" in "india")  #True
+print("x" in "india")  #False
+print("x" not in "india")  #True
+print(10  in [5,7,10,12,34])  #True
+print(30  in [5,7,10,12,34])  #False
+print(30  not in [5,7,10,12,34])  #True
+
+
+
+
+
+control statment
+_________________________
+sequentional control statement
+_____________________________________
+every line must execute
+
+print("A")
+print("B")
+print("C")
+
+o/p:
+A
+B
+C
+
+
+
+
+
+
+condtional 
+____________
+if
+if else
+elif
+
+
+if syntax
+_______
+
+if  condtion:
+	if block
+	.
+	.
+
+a=5
+if a>4:
+	a=6
+print(a)
+
+o/p:
+6
+
+a=5
+if a<4:
+	a=6
+print(a)
+o/p:
+5
+
+
+
+
+
+
+
+
+#wap take a number from keyboad check no is +ve
+
+print("enter a number ")
+no=int(input())
+if no>=0:
+	print("+ve")
+
+o/p:
+enter a number
+5
++ve
+
+o/p:
+enter a number
+-2
+
+#wap take a number from keyboad check no is -ve
+
+print("enter a number ")
+no=int(input())
+if no<0:
+    print("no is -ve ")
+#wap take a number from keyboad check no is zero
+
+print("enter a number ")
+no=int(input())
+if no==0:
+    print("zero")
+
+#wap take a number from keyboad check no is nonzero
+print("enter a number ")
+no=int(input())
+if no!=0:
+    print("nonzero")
+
+#wap take a number from keyboad check no is even no
+
+
+
+#wap take a number from keyboad check no is odd no
+
+#wap take a number from keyboad check last digit even
+#wap take a number from keyboad check last digit odd
+
+#wap take salary from keyboad if salary>=5000 da=30% hra=20% then display basic salary da hra and totalsal
+
+print("basic sal ")
+sal=float(input())
+da,hra=0,0
+if sal>=5000:
+    da=sal*0.3
+    hra=sal*0.2
+totalsal=sal+da+hra
+print("basic sal=",sal)
+print("da=",da)
+print("hra=",hra)
+print("total sal=",totalsal)
+
+
+#convert -ve number to +ve number
+
+print("enter a number ")
+no=int(input())
+if no<0:
+    no=-no
+print(no)
+
+multiple if
+___________________
+program contain more than one if evey if condtion must checking
+
+
+#wap take a number form keyboard check no is 0  +ve -ve
+
+print("enter a number ")
+no=int(input())
+if no==0:
+    print("zero")
+if no>0:
+    print("+ve")
+if no<0:
+    print("-ve")
+
+
+nested if 
+_____________
+
+if c1:
+    if c2:
+        stmt 
+
+#wap take  a number from keyboard check no is 2 digit number  (+ve number )
+print("enter a number ")
+no=int(input())
+if no>9:
+    if no<100:
+        print("2 digit number ")
+
+
+#wap take  a number from keyboard check no is 2 digit number  
+print("enter a number ")
+no=int(input())
+if no<0:
+    no=-no
+if no>9:
+    if no<100:
+        print("2 digit number ")
+
+
+
+#wap take  a number from keyboard check no is 2 digit number 
+print("enter a number ")
+no=int(input())
+if no<0:
+    no=-no
+if no>9 and no<100:
+    print("2 digit number ")
+
+#wap take  a number from keyboard check no is 2 digit number  
+print("enter a number ")
+no=int(input())
+if no<0:
+    no=-no
+if 9<no<100:
+    print("2 digit number ")
+
+
+
+
+ascii   unicode value
+________________________
+A    65
+B    66
+Z    90
+
+a    97
+b    98
+z    122
+
+
+0    48
+1    49
+9    57
+
+
+#display   unicode value of char   or ascii value 
+import sys
+print("enter a char ")
+ch=input()
+if len(ch)!=1:
+    print("single char allow ")
+    sys.exit()
+print(ch)
+print(ord(ch))
+
+C:\Users\LENOVO\OneDrive\Desktop\python by lipsa>py ifp1.py
+enter a char
+Z
+Z
+90
+
+C:\Users\LENOVO\OneDrive\Desktop\python by lipsa>py ifp1.py
+enter a char
+a
+a
+97
+
+C:\Users\LENOVO\OneDrive\Desktop\python by lipsa>py ifp1.py
+enter a char
+z
+z
+122
+
+C:\Users\LENOVO\OneDrive\Desktop\python by lipsa>py ifp1.py
+enter a char
+0
+0
+48
+
+C:\Users\LENOVO\OneDrive\Desktop\python by lipsa>py ifp1.py
+enter a char
+
+
+32
+
+
+
+#wap check char is upper case
+import sys
+print("enter a char ")
+ch=input()
+if len(ch)!=1:
+    print("single char allow ")
+    sys.exit()
+if ch>='A' and ch<='Z':
+    print("upper case")
+
+
+
+or
+
+import sys
+print("enter a char ")
+ch=input()
+if len(ch)!=1:
+    print("single char allow ")
+    sys.exit()
+x=ord(ch)
+if x>=65 and x<=90:
+    print("upper case")
+
+
+#wap check char is lower case
+
+import sys
+print("enter a char ")
+ch=input()
+if len(ch)!=1:
+    print("single char allow ")
+    sys.exit()
+x=ord(ch)
+if x>=97 and x<=122:
+    print("lower case")
+
+#wap convert upper case to lower case
+import sys
+print("enter a upper char ")
+ch=input()
+if len(ch)!=1:
+    print("single char allow ")
+    sys.exit()
+if ch>='A' and ch<='Z':
+        x=ord(ch)+32
+        print(chr(x))
+
+
+
+if  else  statement
+_______________________
+
+if  condtion:
+        if stmt block
+else:
+        else stmt block
+
+
+if True:
+        print("A")
+else:
+        print("B")
+
+
+o/p:
+A
+
+
+if False:
+        print("A")
+else:
+        print("B")
+
+
+o/p:
+B
+
+
+
+a=5
+if a>4:
+    a=10
+else:
+    a=20
+print(a)
+
+o/p:
+10
+
+
+a=5
+if a<4:
+    a=10
+else:
+    a=20
+print(a)
+
+o/p:
+20
+
+
+
+#wap take a number from keyboard check no is +ve or -ve
+
+print("enter a number ")
+no=int(input())
+if no>=0:
+    print("+ve")
+else:
+    print("-ve")
+
+#wap take a number from keyboard check no is even or odd
+print("enter a number ")
+no=int(input())
+if no%2==0:
+    print("even number")
+else:
+    print("odd number")
+
+#wap take salary from  keyboad if salary>=5000 da=30% hra=20%  if salary <5000 
+da=20% hra=10% then display basic salary da hra and totalsal
+
+print("enter basic sal ")
+sal=float(input())
+if sal>=5000:
+    da=sal*0.3
+    hra=sal*0.2
+else:
+    da=sal*0.2
+    hra=sal*0.1
+totalsal=sal+da+hra
+print("basic sal=",sal)
+print("da=",da)
+print("hra=",hra)
+print("total sal=",totalsal)
+
+
+terNary operator 
+_____________________
+
+truepart if condtion else falsepart
+
+
+#wap take a number from keyboard check no is +ve or -ve
+print("enter a number ")
+no=int(input())
+print("+ve") if no>=0 else print("-ve")
+
+
+
+#wap take a number from keyboard check no is even or odd
+print("enter a number ")
+no=int(input())
+print("even number") if no%2==0 else print("odd number")
+
+
+
+#wap take salary from  keyboad if salary>=5000 da=30% hra=20%  if salary <5000 
+#da=20% hra=10% then display basic salary da hra and totalsal
+
+print("enter basic sal ")
+sal=float(input())
+da=sal*0.3 if sal>=5000 else sal*0.2
+hra=sal*0.2 if sal>=5000 else sal*0.1
+totalsal=sal+da+hra
+print("basic sal=",sal)
+print("da=",da)
+print("hra=",hra)
+print("total sal=",totalsal)
+
+
+
+
+
+nested if else statement
+____________________________
+syn1:
+
+if   c1:
+	if c2:
+		c2 true block
+	else:
+		c2 false block
+
+
+#wap take number from keyboard check no is +ve or -ve  zero no output
+print("enter a number ")
+no=int(input())
+if no!=0:
+	if no>0:
+		print("+ve")
+	else:
+		print("-ve")
+
+
+
+syn2:
+
+if   c1:
+	if c2:
+		c2 true block
+	else:
+		c2 false block
+else:
+	c1 false block
+
+#wap take number from keyboard check no is +ve  -ve  zero 
+print("enter a number ")
+no=int(input())
+if no!=0:
+	if no>0:
+		print("+ve")
+	else:
+		print("-ve")
+else:
+	print("ZERO")
+
+
+
+syn3:
+if   c1:
+	c1 true block
+else:
+	if c2:
+		c2 true block
+	else:
+		c2 false block
+#wap take number from keyboard check no is +ve  -ve  zero 
+print("enter a number ")
+no=int(input())
+if no==0:
+	print("zero")
+else:
+	if no>0:
+		print("+ve")
+	else:
+		print("-ve")
+
+
+syn4:
+if   c1:
+	if c2:
+		c2 true block
+	else:
+		c2 false block
+else:
+	if c3:
+		c3 true block
+	else:
+		c3 false block
+
+#wap take 3 number from keyboard display bigest number
+print("enter three nos")
+no1=int(input())
+no2=int(input())
+no3=int(input())
+if no1>=no2:
+	if no1>=no3:
+		print("first number is biger ",no1)
+	else:
+		print("third number is biger ",no3)
+else:
+	if no2>=no3:
+		print("second no is biger ",no2)
+	else:
+		print("third no is biger ",no3)
+
+
+elif statement
+_________________
+syn3:
+if   c1:
+	 c1 true block
+elif c2:
+	c2 true block
+else:
+	 false block
+where the condtion is true other condtion not checking
+
+#wap take number from keyboard check no is +ve  -ve  zero 
+print("enter a number ")
+no=int(input())
+if no>0:
+	print("+ve")
+elif  no<0:
+	print("-ve")
+else:
+	print("zero")
+
+#wap take no from keyboard check no is sd dd  td and od using elif
+print("enter a number ")
+no=int(input())
+if no<0:
+	no=-no
+#check
+if no<10:
+	print("sd")
+elif no<100:
+	print("dd")
+elif no<1000:
+	print("td")
+else:
+	print("od")
+#wap take no from keyboard no is divisble by 5 and 7 only 5 only 7 not divisble 5 and 7
+print("enter a number ")
+no=int(input())
+if no%5==0 and no%7==0:
+	print("d by 5 and 7")
+elif no%5==0:
+	print("only 5")
+elif no%7==0:
+	print("only 7")
+else:
+	print("not div by 5 and 7")
+
+#wap take two no from keyboard enter your choice 1.add 2.sub 3.mult 
+print("enter two number ")
+no1=int(input())
+no2=int(input())
+print("enter your choice\n1.add\n2.sub\n3.mult ")
+ch=int(input())
+if ch==1:
+	print("sum=",no1+no2)
+elif ch==2:
+	print("sub=",no1-no2)
+elif ch==3:
+	print("mult=",no1*no2)
+else:
+	print("invalid choice ")
+
+3 Program: Area of Square, Rectangle, and Circle
+import math
+print("Choose a shape to calculate area:")
+print("1. Square")
+print("2. Rectangle")
+print("3. Circle")
+
+choice = int(input("Enter your choice (1-3): "))
+
+if choice == 1:
+    side = float(input("Enter the side of the square: "))
+    area = side * side
+    print("Area of Square =", area)
+
+elif choice == 2:
+    length = float(input("Enter the length of the rectangle: "))
+    breadth = float(input("Enter the breadth of the rectangle: "))
+    area = length * breadth
+    print("Area of Rectangle =", area)
+elif choice == 3:
+    radius = float(input("Enter the radius of the circle: "))
+    area = math.pi * radius * radius
+    print("Area of Circle =", area)
+
+else:
+    print("Invalid choice")
+
+
+
+print("Enter two numbers:")
+no1 = int(input("First number: "))
+no2 = int(input("Second number: "))
+print("\nEnter an operator (+, -, *, //):")
+op = input("Operator: ")
+
+if op == "+":
+    print("Result =", no1 + no2)
+elif op == "-":
+    print("Result =", no1 - no2)
+elif op == "*":
+    print("Result =", no1 * no2)
+elif op == "//":
+    if no2 != 0:
+        print("Result =", no1 // no2)
+    else:
+        print("Division by zero is not allowed.")
+else:
+    print("Invalid operator")
+
+
+
+✅ Program: Electricity Bill Calculation
+Assume the following rates:
+
+Units Consumed	Rate per Unit
+0 - 100	₹1.5
+101 - 200	₹2.5
+201 - 300	₹4.0
+Above 300	₹6.0
+
+
+# Electricity Bill Calculator
+
+units = int(input("Enter total electricity units consumed: "))
+bill = 0
+
+if units <= 100:
+    bill = units * 1.5
+elif units <= 200:
+    bill = (100 * 1.5) + (units - 100) * 2.5
+elif units <= 300:
+    bill = (100 * 1.5) + (100 * 2.5) + (units - 200) * 4.0
+else:
+    bill = (100 * 1.5) + (100 * 2.5) + (100 * 4.0) + (units - 300) * 6.0
+
+print("Total Bill = ₹", round(bill, 2))
+
+Using match-case (Python 3.10 and above)
+________________________________________________________
+# Only works in Python 3.10 or newer
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        print("Case 1: Add")
+    case 2:
+        print("Case 2: Subtract")
+    case 3:
+        print("Case 3: Multiply")
+    case _:
+        print("Invalid choice")
+
+
+#wap take two no from keyboard enter your choice 1.add 2.sub 3.mult 
+print("enter two number ")
+no1=int(input())
+no2=int(input())
+print("enter your choice\n1.add\n2.sub\n3.mult ")
+ch=int(input())
+match ch:
+	case 1:print("sum=",no1+no2)
+	case 2:print("sub=",no1-no2)
+	case 3:print("mult=",no1*no2)
+	case _:print("invalid choice ")
+
+
+
+
+print("Enter a number:")
+num = int(input())
+
+print("1. Check Even")
+print("2. Check Odd")
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        if num % 2 == 0:
+            print("Even number")
+        else:
+            print("Not Even")
+    case 2:
+        if num % 2 != 0:
+            print("Odd number")
+        else:
+            print("Not Odd")
+    case _:
+        print("Invalid choice")
+
+
+
+print("Enter two numbers:")
+a = int(input())
+b = int(input())
+
+print("1. Find Maximum")
+print("2. Find Minimum")
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        print("Maximum =", max(a, b))
+    case 2:
+        print("Minimum =", min(a, b))
+    case _:
+        print("Invalid choice")
+
+
+
+
+ch = input("Enter a character: ").lower()
+
+print("1. Check Vowel")
+print("2. Check Consonant")
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        if ch in 'aeiou':
+            print("Vowel")
+        else:
+            print("Not a vowel")
+    case 2:
+        if ch.isalpha() and ch not in 'aeiou':
+            print("Consonant")
+        else:
+            print("Not a consonant")
+    case _:
+        print("Invalid choice")
+
+
+
+
+
+
+print("Enter two numbers:")
+a = int(input())
+b = int(input())
+
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        print("Addition =", a + b)
+    case 2:
+        print("Subtraction =", a - b)
+    case 3:
+        print("Multiplication =", a * b)
+    case 4:
+        if b != 0:
+            print("Division =", a / b)
+        else:
+            print("Cannot divide by zero")
+    case _:
+        print("Invalid choice")
+
+
+
+
+
+
+
+
+marks = int(input("Enter your marks (0-100): "))
+
+print("1. Check Grade")
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        match marks:
+            case _ if marks >= 90: print("Grade: A")
+            case _ if marks >= 75: print("Grade: B")
+            case _ if marks >= 60: print("Grade: C")
+            case _ if marks >= 40: print("Grade: D")
+            case _ if marks >= 0: print("Grade: F")
+            case _: print("Invalid marks")
+    case _:
+        print("Invalid choice")
+
+
+
+looping
+_________________
+some statement repeated continously then you choose loop.
+
+
+print("hi")
+print("hi")
+print("hi")
+print("hi")
+print("hi")
+
+
+
+print("A")
+print("B")
+print("C")
+print("A")
+print("B")
+print("C")
+print("A")
+print("B")
+print("C")
+
+
+
+i=1
+print(i)
+i=i+1
+print(i)
+i=i+1
+print(i)
+i=i+1
+print(i)
+i=i+1
+print(i)
+i=i+1
+
+
+using looping we write that repeated stmt only once inside the loop body part
+
+
+There are 2 types
+(1)while
+(2)for in
+
+every loop there are 3 section
+(1)start value /initlization
+(2)stop value /condtion
+(3)step value /update /inc/dec
+
+while loop syntax
+____________________
+
+initlization
+while condtion:
+	repeated stmt write once
+	inc/dec
+
+
+#wap display hi msg 5 times
+
+i=1
+while i<6:
+	print("hi")
+	i=i+1  #i+=1
+
+
+#wap display A B C 3 times
+
+i=1
+while i<4:
+	print("A")
+	print("B")
+	print("C")
+	i=i+1
+#wap display 1 to 5
+i=1
+while i<6:       #i<=5    #i!=6
+	print(i)
+	i=i+1
+
+#wap display 10 to 20
+i=10
+while i<21:   #i<=20   #i!=21
+	print(i)
+	i=i+1
+
+#wap display 5 to 1
+i=5
+while i>0:    # i>=1     #i!=0 
+	print(i)
+	i=i-1
+#wap display 20 to 10
+i=20
+while i>9:   #i!=9  #i>=10
+	print(i)
+	i=i-1
+
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	print("C")
+print("D")
+print(i)
+o/p:
+A
+B
+C
+B
+C
+B
+C
+B
+C
+D
+5
+
+continue:
+it is keyword.
+it is used to continue the loop .
+every language every loop last statement continue.
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	print("C")
+	continue #by default
+print("D")
+print(i)
+o/p:
+A
+B
+C
+B
+C
+B
+C
+B
+C
+D
+5
+
+
+
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	continue
+	print("C")
+print("D")
+print(i)
+
+i=1,2,3,4,5
+o/p:
+A
+B
+B
+B
+B
+D
+5
+
+
+
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	if i>=3:
+		continue
+	print("C")
+print("D")
+print(i)
+
+i=1,2,3,4,5
+o/p:
+A
+B
+C
+B
+B
+B
+D
+5
+
+
+
+
+
+break:
+it is keyword.
+it is used stop the loop .
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	print("C")
+	break
+print("D")
+print(i)
+o/p:
+A
+B
+C
+D
+2
+
+
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	break
+	print("C")
+print("D")
+print(i)
+
+i=1,2
+o/p:
+A
+B
+D
+2
+
+
+
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	if i>=3:
+		break
+	print("C")
+print("D")
+print(i)
+
+i=1,2,3
+o/p:
+A
+B
+C
+B
+D
+3
+
+pass: 
+i=1
+while False:
+	pass
+print(i)
+
+o/p:
+1
+
+
+
+while False:
+	pass
+print("hi")
+
+
+o/p:
+hi
+
+
+
+
+
+
+while True:
+	pass
+print("hi")
+
+
+
+
+o/p:
+infinite nothing 
+
+
+while True:
+	print("hi")
+print("bye")
+
+
+o/p:
+hi hi ......    cont+c
+
+
+while False:
+	print("hi")
+print("bye")
+
+o/p:
+bye
+
+
+if True:
+	print("hi")
+print("bye")
+
+
+o/p:
+hi
+bye
+
+
+i=1
+while i<6:
+	print(i)
+print("ok")
+
+
+o/p:
+1
+1
+1
+
+contrl+c
+
+
+
+while else
+
+i=1
+print("A")
+while i<3:
+	print("B")
+	i=i+1
+else:
+	print("C")
+print(i)
+
+
+o/p:
+i=1,2,3
+A
+B
+B
+C
+3
+
+
+
+i=1
+print("A")
+while i<3:
+	print("B")
+	i=i+1
+	break
+else:
+	print("loop end")
+print(i)
+
+
+o/p:
+A
+B
+2
+
+
+range(start,stop,step)
+range(start,stop)     step  by default 1
+range(stop)       start=0   step incrase 1      stop-1
+
+
+range(10,20,1)     # 10 to 19
+
+sequence:
+string
+list
+tuple
+set
+range 
+.....
+
+
+for in loop    syntax
+_______________
+
+
+for element in sequnence:
+	repeated stmt
+
+
+
+for i in  "welcome":
+	print(i)
+
+
+o/p:
+w
+e
+l
+c
+o
+m
+e
+
+for i in  "welcome":
+	print("hi")
+
+
+o/p:
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+
+
+#display 1 to 10
+
+for i in range(1,11,1):
+	print(i)
+
+o/p:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+for i in range(1,11):
+	print(i)
+
+o/p:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+for i in range(11):     #range(0,11,1)
+	print(i)
+
+o/p:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+wap 10 to 20
+
+for i in range(10,21,1):  
+	print(i)
+
+
+wap display 10 tp 20 all even number
+for i in range(10,21,2):  
+	print(i)
+
+
+
+#wap 10 to 1
+
+for i in range(10,0,-1):  
+	print(i)
+
+
+
+for i in range(-3,-7,-1):  
+	print(i)
+
+o/p:
+-3
+-4
+-5
+-6
+
+for i in range(-3,-7,1):  
+	print(i)
+
+
+o/p:
+nothing
+
+pass:
+
+for i in range(5):
+	print(i)
+
+o/p:
+0
+1
+2
+3
+4
+
+for i in range(5):
+	pass
+print(i)
+
+o/p:
+4
+
+
+for else:
+
+
+for i in range(3):
+	print("hi")
+else:
+	print("bye")
+print(i)
+
+o/p:
+hi
+hi
+hi
+bye
+2
+
+
+for i in range(3):
+	print("hi")
+	break
+else:
+	print("bye")
+print(i)
+
+o/p:
+hi
+0
+
+
+for i in range(5):
+	print(i)
+	if i==3:
+		break
+	print("hi")
+print("ok")
+print(i)
+
+
+o/p:
+0
+hi
+1
+hi
+2
+hi
+3
+ok
+3
+
+
+
+
+for i in range(5):
+	print(i)
+	if i==3:
+		continue
+	print("hi")
+print("ok")
+print(i)
+
+
+o/p:
+0
+hi
+1
+hi
+2
+hi
+3
+4
+hi
+ok
+4
+C:\Users\LENOVO\OneDrive\Desktop\python9pm>py test.py
+enter two nos
+10
+20
+first no= 10
+second no= 20
+add= 30
+mult= 200
+
+C:\Users\LENOVO\OneDrive\Desktop\python9pm>py test.py
+enter two nos
+50
+60
+first no= 50
+second no= 60
+add= 110
+mult= 3000
+
+#wap take square side formkeyboad dsipaly side area and perimeter
+print("enter square side ")
+s=int(input())
+ar=s*s
+pr=4*s
+print("side=",s)
+print("area=",ar)
+print("perimter=",pr)
+
+o/p:
+enter square side
+5
+side=5
+area=25
+perimeter=20
+
+
+
+
+wap take a student 4 mark from keyboad dispaly all mark
+totalmark and avaerage mark
+print("enter mark1")
+m1=int(input())
+print("enter mark2")
+m2=int(input())
+print("enter mark3")
+m3=int(input())
+print("enter mark4")
+m4=int(input())
+total=m1+m2+m3+m4
+avg=total/4
+print("mark1=",m1)
+print("mark2=",m2)
+print("mark3=",m3)
+print("mark4=",m4)
+print("total=",total)
+print("avg mark=",avg)
+
+
+o/p:
+enter mark1
+90
+enter mark2
+80
+enter mark3
+70
+enter mark4
+80
+mark1=90
+mark2=80
+mark3=70
+mark4=80
+total mark=
+avg=
+
+wap take circle radius from keyboad display radius area and perimetr
+
+
+convert to f  to c
+
+conver c to f
+
+wap find the simple interset
+
+wap take emp sarly from keyboad  da=30% hra=20% then
+display basic sal da hra and total sal
+
+
+
+
+operator
+_______________
+operator is a symbole that operate the operand
+operand may be variable constant and expression
+
+unary operator : it operate one operand  -5
+binary operator  it operate two operand  a+b  5*6
+ternary operator  no avaliable  
+
+arithmetic operator
+__________________
+**   power               10**3  1000
+/    excatly division   10/3    3.33333   
+//   floor division      10//3   3
+%     modules (remainder)  10%3  1
+*      mult                 10*3  30
++     plus                  10+3  13
+-     minus                 10-3   7
+
+
+    operator      precdence     assoictive
+    **              2            R to L
+    * //  % /       3            L to R
+    +  -            4            L to R
+
+  L to R
+
+  10*2*3  
+  20*3
+  60
+
+  10//2*4
+  5*4
+  20
+
+
+  10*4//3
+  40//3
+  13
+
+  r to L
+  2**3**2
+  2**9
+  512
+
+
+
+
+display first digit
+
+1258//1000 1
+369//100  3
+45//10   4
+78//10   7
+
+display last digit
+1258%10 8
+369%10  9
+45%10   5
+78%10   8
+
+
+
+delete last digit
+1258//10    125
+369//10  36
+45//10   4
+78//10   7
+
+assginment operator
+______________________
+
+variable=variable/constant/expression;
+a=10
+b=a;
+a=b+3
+
+10=a   invalid
+10=20  
+
+swapping two number using 3rd variable 
+
+a=10
+b=20
+print("before swapping a=",a,"b=",b)
+temp=a;
+a=b;
+b=temp;
+print("after swapping a=",a,"b=",b)
+
+
+swapping two number without using  3rd variable 
+
+a=10
+b=20
+print("before swapping a=",a,"b=",b)
+a=a+b
+b=a-b;
+a=a-b;
+print("after swapping a=",a,"b=",b)
+
+
+
+
+a=14
+print(a+3)
+a=a//2
+print(a+5)
+print(a)
+o/p:
+17
+12
+7
+
+
+
+
+
+unary + -  operator
+_______________________
+a=5
+b=-a
+print(a,b)
+
+o/p:
+5 -5
+
+
+
+add two no without plus operator
+__________________________________
+a=10
+b=7
+c=a - -b
+print(c)
+
+increment and decrement operator not avaliable in python
+____________________________________________________________
+++
+--
+
+
+a=5
+++a
+print(a)
+
+o/p:
+5
+
+
+a=1
+a=a+1
+print(a)
+
+o/p:
+2
+
+
+
+
+
+a=1
+a+=1    # a=a+1
+print(a)
+o/p:
+2
+
+
+a=1
+++a;
+print(a)
+o/p:
+1   
+
+relation operator
+<
+>
+<=
+>=
+==
+!=
+is
+is not
+in 
+not in
+
+
+2<3  True
+2<3<7  True
+2<10<7  False
+
+2>3   False
+4>2   True
+10>4>2 True
+
+3==3   True
+3==4    False
+3!=4    True
+
+True==True True
+
+2<3==3<4   True
+
+2<3==5<6   False
+
+
+
+logical or short circut operator
+_________________________________
+combine two realtion operator
+or   
+and 
+not
+
+    or   
+op1     op2      result
+True    True      True
+True    False     True
+False    True     True
+False    False     False
+
+print(True or False)  #True
+
+if first operand is true  second operand not checking.
+if first operand  is false  second operand must checking
+any nonzero value    true 
+
+3 or 5    3  print(3 or 5)
+0 or  5   5
+3 or 0    3
+0 or 0    0
+
+a=3 
+b=5
+print(a>2 or b>9) 
+print(a<2 or b>9) 
+print(a>2 or b<9) 
+print(a<2 or b<9) 
+o/p:
+True
+False
+True
+True
+
+
+and
+op1     op2      result
+True    True      True
+True    False     False
+False    True     False
+False    False     False
+
+print(True and False)  #False
+
+if first operand is true  second operand must checking.
+if first operand  is false  second operand not checking
+any nonzero value    True 
+
+3 and 5    5
+0 and  5   0
+3 and 0    0
+0 and 0    0
+
+a=3 
+b=5
+print(a>2 and b>9) 
+print(a<2 and b>9) 
+print(a>2 and b<9) 
+
+o/p:
+False
+False
+True
+
+
+
+
+
+not 
+____
+
+
+operand   resulet
+
+True       False
+False       True
+
+
+not True    False
+not False   True
+
+print(not True)
+print(not False)
+print( not 5)
+print(not not 5)
+
+o/p:
+
+False
+True
+False
+True
+
+
+identity operator
+____________________
+is      compare reference
+is not
+
+==    compare value
+
+a=10
+b=10
+c=20
+print(a is b)
+print(a is c)
+print(a is not c)
+print(a==b)
+
+
+
+
+o/p:
+True
+False
+True
+True
+
+a=[10]
+b=[10]
+c=[20]
+print(a is b)
+print(a is c)
+print(a is not c)
+print(a==b)
+
+
+o/p:
+False
+False
+True
+True
+
+
+membership operator (in ,not in)
+
+print("n" in "india")  #True
+print("ndi" in "india")  #True
+print("x" in "india")  #False
+print("x" not in "india")  #True
+print(10  in [5,7,10,12,34])  #True
+print(30  in [5,7,10,12,34])  #False
+print(30  not in [5,7,10,12,34])  #True
+
+
+
+
+
+control statment
+_________________________
+sequentional control statement
+_____________________________________
+every line must execute
+
+print("A")
+print("B")
+print("C")
+
+o/p:
+A
+B
+C
+
+
+
+
+
+
+condtional 
+____________
+if
+if else
+elif
+
+
+if syntax
+_______
+
+if  condtion:
+	if block
+	.
+	.
+
+a=5
+if a>4:
+	a=6
+print(a)
+
+o/p:
+6
+
+a=5
+if a<4:
+	a=6
+print(a)
+o/p:
+5
+
+
+
+
+
+
+
+
+#wap take a number from keyboad check no is +ve
+
+print("enter a number ")
+no=int(input())
+if no>=0:
+	print("+ve")
+
+o/p:
+enter a number
+5
++ve
+
+o/p:
+enter a number
+-2
+
+#wap take a number from keyboad check no is -ve
+
+print("enter a number ")
+no=int(input())
+if no<0:
+    print("no is -ve ")
+#wap take a number from keyboad check no is zero
+
+print("enter a number ")
+no=int(input())
+if no==0:
+    print("zero")
+
+#wap take a number from keyboad check no is nonzero
+print("enter a number ")
+no=int(input())
+if no!=0:
+    print("nonzero")
+
+#wap take a number from keyboad check no is even no
+
+
+
+#wap take a number from keyboad check no is odd no
+
+#wap take a number from keyboad check last digit even
+#wap take a number from keyboad check last digit odd
+
+#wap take salary from keyboad if salary>=5000 da=30% hra=20% then display basic salary da hra and totalsal
+
+print("basic sal ")
+sal=float(input())
+da,hra=0,0
+if sal>=5000:
+    da=sal*0.3
+    hra=sal*0.2
+totalsal=sal+da+hra
+print("basic sal=",sal)
+print("da=",da)
+print("hra=",hra)
+print("total sal=",totalsal)
+
+
+#convert -ve number to +ve number
+
+print("enter a number ")
+no=int(input())
+if no<0:
+    no=-no
+print(no)
+
+multiple if
+___________________
+program contain more than one if evey if condtion must checking
+
+
+#wap take a number form keyboard check no is 0  +ve -ve
+
+print("enter a number ")
+no=int(input())
+if no==0:
+    print("zero")
+if no>0:
+    print("+ve")
+if no<0:
+    print("-ve")
+
+
+nested if 
+_____________
+
+if c1:
+    if c2:
+        stmt 
+
+#wap take  a number from keyboard check no is 2 digit number  (+ve number )
+print("enter a number ")
+no=int(input())
+if no>9:
+    if no<100:
+        print("2 digit number ")
+
+
+#wap take  a number from keyboard check no is 2 digit number  
+print("enter a number ")
+no=int(input())
+if no<0:
+    no=-no
+if no>9:
+    if no<100:
+        print("2 digit number ")
+
+
+
+#wap take  a number from keyboard check no is 2 digit number 
+print("enter a number ")
+no=int(input())
+if no<0:
+    no=-no
+if no>9 and no<100:
+    print("2 digit number ")
+
+#wap take  a number from keyboard check no is 2 digit number  
+print("enter a number ")
+no=int(input())
+if no<0:
+    no=-no
+if 9<no<100:
+    print("2 digit number ")
+
+
+
+
+ascii   unicode value
+________________________
+A    65
+B    66
+Z    90
+
+a    97
+b    98
+z    122
+
+
+0    48
+1    49
+9    57
+
+
+#display   unicode value of char   or ascii value 
+import sys
+print("enter a char ")
+ch=input()
+if len(ch)!=1:
+    print("single char allow ")
+    sys.exit()
+print(ch)
+print(ord(ch))
+
+C:\Users\LENOVO\OneDrive\Desktop\python by lipsa>py ifp1.py
+enter a char
+Z
+Z
+90
+
+C:\Users\LENOVO\OneDrive\Desktop\python by lipsa>py ifp1.py
+enter a char
+a
+a
+97
+
+C:\Users\LENOVO\OneDrive\Desktop\python by lipsa>py ifp1.py
+enter a char
+z
+z
+122
+
+C:\Users\LENOVO\OneDrive\Desktop\python by lipsa>py ifp1.py
+enter a char
+0
+0
+48
+
+C:\Users\LENOVO\OneDrive\Desktop\python by lipsa>py ifp1.py
+enter a char
+
+
+32
+
+
+
+#wap check char is upper case
+import sys
+print("enter a char ")
+ch=input()
+if len(ch)!=1:
+    print("single char allow ")
+    sys.exit()
+if ch>='A' and ch<='Z':
+    print("upper case")
+
+
+
+or
+
+import sys
+print("enter a char ")
+ch=input()
+if len(ch)!=1:
+    print("single char allow ")
+    sys.exit()
+x=ord(ch)
+if x>=65 and x<=90:
+    print("upper case")
+
+
+#wap check char is lower case
+
+import sys
+print("enter a char ")
+ch=input()
+if len(ch)!=1:
+    print("single char allow ")
+    sys.exit()
+x=ord(ch)
+if x>=97 and x<=122:
+    print("lower case")
+
+#wap convert upper case to lower case
+import sys
+print("enter a upper char ")
+ch=input()
+if len(ch)!=1:
+    print("single char allow ")
+    sys.exit()
+if ch>='A' and ch<='Z':
+        x=ord(ch)+32
+        print(chr(x))
+
+
+
+if  else  statement
+_______________________
+
+if  condtion:
+        if stmt block
+else:
+        else stmt block
+
+
+if True:
+        print("A")
+else:
+        print("B")
+
+
+o/p:
+A
+
+
+if False:
+        print("A")
+else:
+        print("B")
+
+
+o/p:
+B
+
+
+
+a=5
+if a>4:
+    a=10
+else:
+    a=20
+print(a)
+
+o/p:
+10
+
+
+a=5
+if a<4:
+    a=10
+else:
+    a=20
+print(a)
+
+o/p:
+20
+
+
+
+#wap take a number from keyboard check no is +ve or -ve
+
+print("enter a number ")
+no=int(input())
+if no>=0:
+    print("+ve")
+else:
+    print("-ve")
+
+#wap take a number from keyboard check no is even or odd
+print("enter a number ")
+no=int(input())
+if no%2==0:
+    print("even number")
+else:
+    print("odd number")
+
+#wap take salary from  keyboad if salary>=5000 da=30% hra=20%  if salary <5000 
+da=20% hra=10% then display basic salary da hra and totalsal
+
+print("enter basic sal ")
+sal=float(input())
+if sal>=5000:
+    da=sal*0.3
+    hra=sal*0.2
+else:
+    da=sal*0.2
+    hra=sal*0.1
+totalsal=sal+da+hra
+print("basic sal=",sal)
+print("da=",da)
+print("hra=",hra)
+print("total sal=",totalsal)
+
+
+terNary operator 
+_____________________
+
+truepart if condtion else falsepart
+
+
+#wap take a number from keyboard check no is +ve or -ve
+print("enter a number ")
+no=int(input())
+print("+ve") if no>=0 else print("-ve")
+
+
+
+#wap take a number from keyboard check no is even or odd
+print("enter a number ")
+no=int(input())
+print("even number") if no%2==0 else print("odd number")
+
+
+
+#wap take salary from  keyboad if salary>=5000 da=30% hra=20%  if salary <5000 
+#da=20% hra=10% then display basic salary da hra and totalsal
+
+print("enter basic sal ")
+sal=float(input())
+da=sal*0.3 if sal>=5000 else sal*0.2
+hra=sal*0.2 if sal>=5000 else sal*0.1
+totalsal=sal+da+hra
+print("basic sal=",sal)
+print("da=",da)
+print("hra=",hra)
+print("total sal=",totalsal)
+
+
+
+
+
+nested if else statement
+____________________________
+syn1:
+
+if   c1:
+	if c2:
+		c2 true block
+	else:
+		c2 false block
+
+
+#wap take number from keyboard check no is +ve or -ve  zero no output
+print("enter a number ")
+no=int(input())
+if no!=0:
+	if no>0:
+		print("+ve")
+	else:
+		print("-ve")
+
+
+
+syn2:
+
+if   c1:
+	if c2:
+		c2 true block
+	else:
+		c2 false block
+else:
+	c1 false block
+
+#wap take number from keyboard check no is +ve  -ve  zero 
+print("enter a number ")
+no=int(input())
+if no!=0:
+	if no>0:
+		print("+ve")
+	else:
+		print("-ve")
+else:
+	print("ZERO")
+
+
+
+syn3:
+if   c1:
+	c1 true block
+else:
+	if c2:
+		c2 true block
+	else:
+		c2 false block
+#wap take number from keyboard check no is +ve  -ve  zero 
+print("enter a number ")
+no=int(input())
+if no==0:
+	print("zero")
+else:
+	if no>0:
+		print("+ve")
+	else:
+		print("-ve")
+
+
+syn4:
+if   c1:
+	if c2:
+		c2 true block
+	else:
+		c2 false block
+else:
+	if c3:
+		c3 true block
+	else:
+		c3 false block
+
+#wap take 3 number from keyboard display bigest number
+print("enter three nos")
+no1=int(input())
+no2=int(input())
+no3=int(input())
+if no1>=no2:
+	if no1>=no3:
+		print("first number is biger ",no1)
+	else:
+		print("third number is biger ",no3)
+else:
+	if no2>=no3:
+		print("second no is biger ",no2)
+	else:
+		print("third no is biger ",no3)
+
+
+elif statement
+_________________
+syn3:
+if   c1:
+	 c1 true block
+elif c2:
+	c2 true block
+else:
+	 false block
+where the condtion is true other condtion not checking
+
+#wap take number from keyboard check no is +ve  -ve  zero 
+print("enter a number ")
+no=int(input())
+if no>0:
+	print("+ve")
+elif  no<0:
+	print("-ve")
+else:
+	print("zero")
+
+#wap take no from keyboard check no is sd dd  td and od using elif
+print("enter a number ")
+no=int(input())
+if no<0:
+	no=-no
+#check
+if no<10:
+	print("sd")
+elif no<100:
+	print("dd")
+elif no<1000:
+	print("td")
+else:
+	print("od")
+#wap take no from keyboard no is divisble by 5 and 7 only 5 only 7 not divisble 5 and 7
+print("enter a number ")
+no=int(input())
+if no%5==0 and no%7==0:
+	print("d by 5 and 7")
+elif no%5==0:
+	print("only 5")
+elif no%7==0:
+	print("only 7")
+else:
+	print("not div by 5 and 7")
+
+#wap take two no from keyboard enter your choice 1.add 2.sub 3.mult 
+print("enter two number ")
+no1=int(input())
+no2=int(input())
+print("enter your choice\n1.add\n2.sub\n3.mult ")
+ch=int(input())
+if ch==1:
+	print("sum=",no1+no2)
+elif ch==2:
+	print("sub=",no1-no2)
+elif ch==3:
+	print("mult=",no1*no2)
+else:
+	print("invalid choice ")
+
+3 Program: Area of Square, Rectangle, and Circle
+import math
+print("Choose a shape to calculate area:")
+print("1. Square")
+print("2. Rectangle")
+print("3. Circle")
+
+choice = int(input("Enter your choice (1-3): "))
+
+if choice == 1:
+    side = float(input("Enter the side of the square: "))
+    area = side * side
+    print("Area of Square =", area)
+
+elif choice == 2:
+    length = float(input("Enter the length of the rectangle: "))
+    breadth = float(input("Enter the breadth of the rectangle: "))
+    area = length * breadth
+    print("Area of Rectangle =", area)
+elif choice == 3:
+    radius = float(input("Enter the radius of the circle: "))
+    area = math.pi * radius * radius
+    print("Area of Circle =", area)
+
+else:
+    print("Invalid choice")
+
+
+
+print("Enter two numbers:")
+no1 = int(input("First number: "))
+no2 = int(input("Second number: "))
+print("\nEnter an operator (+, -, *, //):")
+op = input("Operator: ")
+
+if op == "+":
+    print("Result =", no1 + no2)
+elif op == "-":
+    print("Result =", no1 - no2)
+elif op == "*":
+    print("Result =", no1 * no2)
+elif op == "//":
+    if no2 != 0:
+        print("Result =", no1 // no2)
+    else:
+        print("Division by zero is not allowed.")
+else:
+    print("Invalid operator")
+
+
+
+✅ Program: Electricity Bill Calculation
+Assume the following rates:
+
+Units Consumed	Rate per Unit
+0 - 100	₹1.5
+101 - 200	₹2.5
+201 - 300	₹4.0
+Above 300	₹6.0
+
+
+# Electricity Bill Calculator
+
+units = int(input("Enter total electricity units consumed: "))
+bill = 0
+
+if units <= 100:
+    bill = units * 1.5
+elif units <= 200:
+    bill = (100 * 1.5) + (units - 100) * 2.5
+elif units <= 300:
+    bill = (100 * 1.5) + (100 * 2.5) + (units - 200) * 4.0
+else:
+    bill = (100 * 1.5) + (100 * 2.5) + (100 * 4.0) + (units - 300) * 6.0
+
+print("Total Bill = ₹", round(bill, 2))
+
+Using match-case (Python 3.10 and above)
+________________________________________________________
+# Only works in Python 3.10 or newer
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        print("Case 1: Add")
+    case 2:
+        print("Case 2: Subtract")
+    case 3:
+        print("Case 3: Multiply")
+    case _:
+        print("Invalid choice")
+
+
+#wap take two no from keyboard enter your choice 1.add 2.sub 3.mult 
+print("enter two number ")
+no1=int(input())
+no2=int(input())
+print("enter your choice\n1.add\n2.sub\n3.mult ")
+ch=int(input())
+match ch:
+	case 1:print("sum=",no1+no2)
+	case 2:print("sub=",no1-no2)
+	case 3:print("mult=",no1*no2)
+	case _:print("invalid choice ")
+
+
+
+
+print("Enter a number:")
+num = int(input())
+
+print("1. Check Even")
+print("2. Check Odd")
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        if num % 2 == 0:
+            print("Even number")
+        else:
+            print("Not Even")
+    case 2:
+        if num % 2 != 0:
+            print("Odd number")
+        else:
+            print("Not Odd")
+    case _:
+        print("Invalid choice")
+
+
+
+print("Enter two numbers:")
+a = int(input())
+b = int(input())
+
+print("1. Find Maximum")
+print("2. Find Minimum")
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        print("Maximum =", max(a, b))
+    case 2:
+        print("Minimum =", min(a, b))
+    case _:
+        print("Invalid choice")
+
+
+
+
+ch = input("Enter a character: ").lower()
+
+print("1. Check Vowel")
+print("2. Check Consonant")
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        if ch in 'aeiou':
+            print("Vowel")
+        else:
+            print("Not a vowel")
+    case 2:
+        if ch.isalpha() and ch not in 'aeiou':
+            print("Consonant")
+        else:
+            print("Not a consonant")
+    case _:
+        print("Invalid choice")
+
+
+
+
+
+
+print("Enter two numbers:")
+a = int(input())
+b = int(input())
+
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        print("Addition =", a + b)
+    case 2:
+        print("Subtraction =", a - b)
+    case 3:
+        print("Multiplication =", a * b)
+    case 4:
+        if b != 0:
+            print("Division =", a / b)
+        else:
+            print("Cannot divide by zero")
+    case _:
+        print("Invalid choice")
+
+
+
+
+
+
+
+
+marks = int(input("Enter your marks (0-100): "))
+
+print("1. Check Grade")
+choice = int(input("Enter your choice: "))
+
+match choice:
+    case 1:
+        match marks:
+            case _ if marks >= 90: print("Grade: A")
+            case _ if marks >= 75: print("Grade: B")
+            case _ if marks >= 60: print("Grade: C")
+            case _ if marks >= 40: print("Grade: D")
+            case _ if marks >= 0: print("Grade: F")
+            case _: print("Invalid marks")
+    case _:
+        print("Invalid choice")
+
+
+
+looping
+_________________
+some statement repeated continously then you choose loop.
+
+
+print("hi")
+print("hi")
+print("hi")
+print("hi")
+print("hi")
+
+
+
+print("A")
+print("B")
+print("C")
+print("A")
+print("B")
+print("C")
+print("A")
+print("B")
+print("C")
+
+
+
+i=1
+print(i)
+i=i+1
+print(i)
+i=i+1
+print(i)
+i=i+1
+print(i)
+i=i+1
+print(i)
+i=i+1
+
+
+using looping we write that repeated stmt only once inside the loop body part
+
+
+There are 2 types
+(1)while
+(2)for in
+
+every loop there are 3 section
+(1)start value /initlization
+(2)stop value /condtion
+(3)step value /update /inc/dec
+
+while loop syntax
+____________________
+
+initlization
+while condtion:
+	repeated stmt write once
+	inc/dec
+
+
+#wap display hi msg 5 times
+
+i=1
+while i<6:
+	print("hi")
+	i=i+1  #i+=1
+
+
+#wap display A B C 3 times
+
+i=1
+while i<4:
+	print("A")
+	print("B")
+	print("C")
+	i=i+1
+#wap display 1 to 5
+i=1
+while i<6:       #i<=5    #i!=6
+	print(i)
+	i=i+1
+
+#wap display 10 to 20
+i=10
+while i<21:   #i<=20   #i!=21
+	print(i)
+	i=i+1
+
+#wap display 5 to 1
+i=5
+while i>0:    # i>=1     #i!=0 
+	print(i)
+	i=i-1
+#wap display 20 to 10
+i=20
+while i>9:   #i!=9  #i>=10
+	print(i)
+	i=i-1
+
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	print("C")
+print("D")
+print(i)
+o/p:
+A
+B
+C
+B
+C
+B
+C
+B
+C
+D
+5
+
+continue:
+it is keyword.
+it is used to continue the loop .
+every language every loop last statement continue.
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	print("C")
+	continue #by default
+print("D")
+print(i)
+o/p:
+A
+B
+C
+B
+C
+B
+C
+B
+C
+D
+5
+
+
+
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	continue
+	print("C")
+print("D")
+print(i)
+
+i=1,2,3,4,5
+o/p:
+A
+B
+B
+B
+B
+D
+5
+
+
+
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	if i>=3:
+		continue
+	print("C")
+print("D")
+print(i)
+
+i=1,2,3,4,5
+o/p:
+A
+B
+C
+B
+B
+B
+D
+5
+
+
+
+
+
+break:
+it is keyword.
+it is used stop the loop .
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	print("C")
+	break
+print("D")
+print(i)
+o/p:
+A
+B
+C
+D
+2
+
+
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	break
+	print("C")
+print("D")
+print(i)
+
+i=1,2
+o/p:
+A
+B
+D
+2
+
+
+
+
+print("A")
+i=1
+while i<5:
+	print("B")
+	i=i+1
+	if i>=3:
+		break
+	print("C")
+print("D")
+print(i)
+
+i=1,2,3
+o/p:
+A
+B
+C
+B
+D
+3
+
+pass: 
+i=1
+while False:
+	pass
+print(i)
+
+o/p:
+1
+
+
+
+while False:
+	pass
+print("hi")
+
+
+o/p:
+hi
+
+
+
+
+
+
+while True:
+	pass
+print("hi")
+
+
+
+
+o/p:
+infinite nothing 
+
+
+while True:
+	print("hi")
+print("bye")
+
+
+o/p:
+hi hi ......    cont+c
+
+
+while False:
+	print("hi")
+print("bye")
+
+o/p:
+bye
+
+
+if True:
+	print("hi")
+print("bye")
+
+
+o/p:
+hi
+bye
+
+
+i=1
+while i<6:
+	print(i)
+print("ok")
+
+
+o/p:
+1
+1
+1
+
+contrl+c
+
+
+
+while else
+
+i=1
+print("A")
+while i<3:
+	print("B")
+	i=i+1
+else:
+	print("C")
+print(i)
+
+
+o/p:
+i=1,2,3
+A
+B
+B
+C
+3
+
+
+
+i=1
+print("A")
+while i<3:
+	print("B")
+	i=i+1
+	break
+else:
+	print("loop end")
+print(i)
+
+
+o/p:
+A
+B
+2
+
+
+range(start,stop,step)
+range(start,stop)     step  by default 1
+range(stop)       start=0   step incrase 1      stop-1
+
+
+range(10,20,1)     # 10 to 19
+
+sequence:
+string
+list
+tuple
+set
+range 
+.....
+
+
+for in loop    syntax
+_______________
+
+
+for element in sequnence:
+	repeated stmt
+
+
+
+for i in  "welcome":
+	print(i)
+
+
+o/p:
+w
+e
+l
+c
+o
+m
+e
+
+for i in  "welcome":
+	print("hi")
+
+
+o/p:
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+
+
+#display 1 to 10
+
+for i in range(1,11,1):
+	print(i)
+
+o/p:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+for i in range(1,11):
+	print(i)
+
+o/p:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+for i in range(11):     #range(0,11,1)
+	print(i)
+
+o/p:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+wap 10 to 20
+
+for i in range(10,21,1):  
+	print(i)
+
+
+wap display 10 tp 20 all even number
+for i in range(10,21,2):  
+	print(i)
+
+
+
+#wap 10 to 1
+
+for i in range(10,0,-1):  
+	print(i)
+
+
+
+for i in range(-3,-7,-1):  
+	print(i)
+
+o/p:
+-3
+-4
+-5
+-6
+
+for i in range(-3,-7,1):  
+	print(i)
+
+
+o/p:
+nothing
+
+pass:
+
+for i in range(5):
+	print(i)
+
+o/p:
+0
+1
+2
+3
+4
+
+for i in range(5):
+	pass
+print(i)
+
+o/p:
+4
+
+
+for else:
+
+
+for i in range(3):
+	print("hi")
+else:
+	print("bye")
+print(i)
+
+o/p:
+hi
+hi
+hi
+bye
+2
+
+
+for i in range(3):
+	print("hi")
+	break
+else:
+	print("bye")
+print(i)
+
+o/p:
+hi
+0
+
+
+for i in range(5):
+	print(i)
+	if i==3:
+		break
+	print("hi")
+print("ok")
+print(i)
+
+
+o/p:
+0
+hi
+1
+hi
+2
+hi
+3
+ok
+3
+
+
+
+
+for i in range(5):
+	print(i)
+	if i==3:
+		continue
+	print("hi")
+print("ok")
+print(i)
+
+
+o/p:
+0
+hi
+1
+hi
+2
+hi
+3
+4
+hi
+ok
+4
