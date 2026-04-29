@@ -16,7 +16,7 @@ while ct==1:
 	else:
 		ptr.next=cur
 	ptr=cur
-	print("Do you want to continue adding data(press 1 else press any number to exit): ")
+	print("Do you want to continue adding data?(press 1 else press any number to exit): ")
 	ct=int(input())
 print("Elements are: ")
 ptr=head
