@@ -29,5 +29,14 @@ class SL:
 		while ptr!=None:
 			print(ptr.data)
 			ptr=ptr.next
+	@classmethod
+	def delbegn(cls):
+		if cls.head==None:
+			print("No elements")
+			return
+		print("Deleted element = ",cls.head.data)
+		cls.head=cls.head.next
 SL.create()
+SL.disp()
+SL.delbegn()
 SL.disp()

@@ -29,5 +29,14 @@ class SL:
 		while ptr!=None:
 			print(ptr.data)
 			ptr=ptr.next
+	@classmethod
+	def sum(cls):
+		s=0
+		ptr=cls.head
+		while (ptr!=None):
+			s=s+ptr.data
+			ptr=ptr.next
+		print(f"Sum = {s}")
 SL.create()
 SL.disp()
+SL.sum()

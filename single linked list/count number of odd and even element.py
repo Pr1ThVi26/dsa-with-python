@@ -29,5 +29,17 @@ class SL:
 		while ptr!=None:
 			print(ptr.data)
 			ptr=ptr.next
+	@classmethod
+	def countoddeven(cls):
+		o,e=0,0
+		ptr=cls.head
+		while (ptr!=None):
+			if ptr.data%2==0:
+				e=e+1
+			else:
+				o=o+1
+			ptr=ptr.next
+		print(f"Odd= {o}\nEven= {e}")
 SL.create()
 SL.disp()
+SL.countoddeven()

@@ -29,5 +29,22 @@ class SL:
 		while ptr!=None:
 			print(ptr.data)
 			ptr=ptr.next
+	@classmethod
+	def delend(cls):
+		if cls.head==None:
+			print("No elements")
+			return
+		if cls.head.next==None:
+			print("Deleted element =",cls.head.data)
+			cls.head=None
+			return
+		ptr=cls.head
+		while (ptr.next.next!=None):
+			ptr=ptr.next
+		print("Deleted element =",ptr.next.data)
+		ptr.next=None
+
 SL.create()
+SL.disp()
+SL.delend()
 SL.disp()

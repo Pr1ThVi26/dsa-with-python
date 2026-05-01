@@ -29,5 +29,14 @@ class SL:
 		while ptr!=None:
 			print(ptr.data)
 			ptr=ptr.next
+	@classmethod
+	def countnode(cls):
+		c=0
+		ptr=cls.head
+		while (ptr!=None):
+			c=c+1
+			ptr=ptr.next
+		print(f"Number of nodes = {c}")
 SL.create()
 SL.disp()
+SL.countnode()
