@@ -3,44 +3,45 @@ class Node:
 		self.data=ele
 		self.next=None
 class SL:
-	head=None
 	@classmethod
 	def create(cls):
-		ptr,cur=None,None
+		cur=None
 		c=0
 		ct=1
+		head=None
 		while ct==1:
 			c=c+1
 			print(f"Enter node {c} data: ")
 			ele=int(input())
 			cur=Node(ele)
 			cur.next=None
-			if cls.head==None:
-				cls.head=cur
+			if head==None:
+				head=cur
 			else:
 				ptr.next=cur
 			ptr=cur
 			print("Do you want to continue adding data?(press 1 else press any number to exit): ")
 			ct=int(input())
+		return head
 	@classmethod
-	def disp(cls):
+	def disp(cls,head):
 		print("Elements are: ")
-		ptr=cls.head
+		ptr=head
 		while ptr!=None:
 			print(ptr.data)
 			ptr=ptr.next
 	@classmethod
-	def frequency(cls,num):
-		c=0
-		ptr=cls.head
-		while ptr!=None:
-			if ptr.data==num:
-				c=c+1
+	def merge(cls,L1,L2):
+		ptr=L1
+		while ptr.next!=None:
 			ptr=ptr.next
-		if ptr==None:
-			print(f"Element is present {c} times")
-
-SL.create()
-SL.disp()
-num=int(input("Enter element to search :"))
-SL.frequency(num)
+		
+		ptr.next=L2
+L1=SL.create()
+L2=SL.create()
+SL.disp(L1)
+SL.disp(L2)
+print("After merge:")
+SL.merge(L1,L2)
+SL.disp(L1)
+SL.disp(L2)

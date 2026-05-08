@@ -48,7 +48,7 @@ class SL:
 			cls.head=cur
 			return
 		c=cls.count()
-		if pos>c or pos<1:
+		if pos>c+1 or pos<1:
 			print("Invalid postion")
 			return
 		ptr=cls.head

@@ -30,17 +30,17 @@ class SL:
 			print(ptr.data)
 			ptr=ptr.next
 	@classmethod
-	def frequency(cls,num):
-		c=0
+	def rev(cls):
 		ptr=cls.head
-		while ptr!=None:
-			if ptr.data==num:
-				c=c+1
-			ptr=ptr.next
-		if ptr==None:
-			print(f"Element is present {c} times")
-
+		cur=ptr.next
+		while cur!=None:
+			temp=cur.next
+			cur.next=ptr
+			ptr=cur
+			cur=temp
+		cls.head.next=None
+		cls.head=ptr 
 SL.create()
 SL.disp()
-num=int(input("Enter element to search :"))
-SL.frequency(num)
+SL.rev()
+SL.disp()

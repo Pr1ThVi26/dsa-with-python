@@ -30,17 +30,27 @@ class SL:
 			print(ptr.data)
 			ptr=ptr.next
 	@classmethod
-	def frequency(cls,num):
-		c=0
+	def searchndel(cls,num):
+		if cls.head == None:
+			print("No element")
+			return
+		temp=None
 		ptr=cls.head
 		while ptr!=None:
 			if ptr.data==num:
-				c=c+1
+				print("Deleted element : ",ptr.data)
+				break
+			temp=ptr
 			ptr=ptr.next
+		if ptr == cls.head:
+			cls.head = ptr.next
+			return
 		if ptr==None:
-			print(f"Element is present {c} times")
-
+			print("Element not found!")
+		else:
+			temp.next=ptr.next
 SL.create()
 SL.disp()
-num=int(input("Enter element to search :"))
-SL.frequency(num)
+num=int(input("Enter element to be deleted :"))
+SL.searchndel(num)
+SL.disp()
