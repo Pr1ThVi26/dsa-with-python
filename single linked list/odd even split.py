@@ -30,17 +30,35 @@ class SL:
 		while ptr!=None:
 			print(ptr.data)
 			ptr=ptr.next
+
 	@classmethod
-	def merge(cls,L1,L2):
+	def insertend(cls,L1,ele):
+		cur=Node(ele)
+		cur.next=None
+		if L1==None:
+			L1=cur
+			return L1
 		ptr=L1
-		while ptr.next!=None:
+		while (ptr.next!=None):
 			ptr=ptr.next
-		ptr.next=L2
+		ptr.next=cur
+		return L1
+
+	@classmethod
+	def evenoddsplit(cls,L1):
+		ptr=L1
+		odd=None
+		even=None
+		while ptr!=None:
+			if ptr.data%2==0:
+				even=cls.insertend(even,ptr.data)
+			else:
+				odd=cls.insertend(odd,ptr.data)
+			ptr=ptr.next
+		print("Even")
+		SL.disp(even)
+		print("Odd")
+		SL.disp(odd)
 L1=SL.create()
-L2=SL.create()
 SL.disp(L1)
-SL.disp(L2)
-print("After merge:")
-SL.merge(L1,L2)
-SL.disp(L1)
-SL.disp(L2)
+SL.evenoddsplit(L1)

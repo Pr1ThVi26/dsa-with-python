@@ -32,15 +32,40 @@ class SL:
 			ptr=ptr.next
 	@classmethod
 	def merge(cls,L1,L2):
-		ptr=L1
-		while ptr.next!=None:
+		L3=None
+		ptr1=L1
+		ptr2=L2
+		while ptr1!=None and ptr2!=None:
+			if ptr1.data<ptr2.data:
+				L3=cls.insertend(L3,ptr1.data)
+				ptr1=ptr1.next
+			else:
+				L3=cls.insertend(L3,ptr2.data)
+				ptr2=ptr2.next
+		while ptr1!=None:
+			L3=cls.insertend(L3,ptr1.data)
+			ptr1=ptr1.next
+		while ptr2!=None:
+			L3=cls.insertend(L3,ptr2.data)
+			ptr2=ptr2.next
+		SL.disp(L3)
+
+	@classmethod
+	def insertend(cls,L3,ele):
+		cur=Node(ele)
+		cur.next=None
+		if L3==None:
+			L3=cur
+			return L3
+		ptr=L3
+		while (ptr.next!=None):
 			ptr=ptr.next
-		ptr.next=L2
+		ptr.next=cur
+		return L3
+
 L1=SL.create()
 L2=SL.create()
 SL.disp(L1)
 SL.disp(L2)
-print("After merge:")
+print("After merge")
 SL.merge(L1,L2)
-SL.disp(L1)
-SL.disp(L2)
