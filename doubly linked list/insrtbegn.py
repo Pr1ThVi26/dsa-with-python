@@ -25,7 +25,7 @@ class SL:
 			print("Do you want to continue adding data?(press 1 else press any number to exit): ")
 			ct=int(input())
 
-		@classmethod
+	@classmethod
 	def fwd_disp(cls):
 		if cls.head==None:
 			print("No elements")

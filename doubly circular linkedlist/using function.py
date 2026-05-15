@@ -3,25 +3,26 @@ class Node:
 		self.data=ele
 		self.next=None
 		self.prev=None
-		
 class SL:
 	head=None
 	@classmethod
 	def create(cls):
 		ptr,cur,prev=None,None,None
-		c=0
-		ct=1
+		c,ct=0,1
 		while ct==1:
 			c=c+1
 			print(f"Enter node {c} data: ")
 			ele=int(input())
 			cur=Node(ele)
-			cur.next=None
+			cur.prev=cur
+			cur.next=cur
 			if cls.head==None:
 				cls.head=cur
 			else:
 				ptr.next=cur
+				cur.next=cls.head
 				cur.prev=ptr
+				cls.head.prev=cur
 			ptr=cur
 			print("Do you want to continue adding data?(press 1 else press any number to exit): ")
 			ct=int(input())
@@ -33,7 +34,7 @@ class SL:
 			return
 		print("Elements are: ")
 		ptr=cls.head
-		while ptr.next!=None:
+		while ptr.next!=cls.head:
 			print(ptr.data)
 			ptr=ptr.next
 		print(ptr.data)
@@ -44,13 +45,11 @@ class SL:
 			print("No elements")
 			return
 		print("Elements are: ")
-		ptr=cls.head
-		while ptr.next!=None:
-			ptr=ptr.next
-		while ptr!=None:
+		ptr=cls.head.prev
+		while ptr!=cls.head:
 			print(ptr.data)
 			ptr=ptr.prev
-
+		print(ptr.data)
 
 SL.create()
 SL.fwd_disp()

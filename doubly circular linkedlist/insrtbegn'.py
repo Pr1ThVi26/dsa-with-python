@@ -3,7 +3,6 @@ class Node:
 		self.data=ele
 		self.next=None
 		self.prev=None
-		
 class SL:
 	head=None
 	@classmethod
@@ -16,12 +15,15 @@ class SL:
 			print(f"Enter node {c} data: ")
 			ele=int(input())
 			cur=Node(ele)
-			cur.next=None
+			cur.prev=cur
+			cur.next=cur
 			if cls.head==None:
 				cls.head=cur
 			else:
 				ptr.next=cur
 				cur.prev=ptr
+				cur.next=cls.head
+				cls.head.prev=cur
 			ptr=cur
 			print("Do you want to continue adding data?(press 1 else press any number to exit): ")
 			ct=int(input())
@@ -33,7 +35,7 @@ class SL:
 			return
 		print("Elements are: ")
 		ptr=cls.head
-		while ptr.next!=None:
+		while ptr.next!=cls.head:
 			print(ptr.data)
 			ptr=ptr.next
 		print(ptr.data)
@@ -44,14 +46,31 @@ class SL:
 			print("No elements")
 			return
 		print("Elements are: ")
-		ptr=cls.head
-		while ptr.next!=None:
-			ptr=ptr.next
-		while ptr!=None:
+		ptr=cls.head.prev
+		while ptr!=cls.head:
 			print(ptr.data)
 			ptr=ptr.prev
+		print(ptr.data)
 
+	@classmethod
+	def insertbegn(cls):
+		print("Enter new node data: ")
+		ele=int(input())
+		cur=Node(ele)
+		if cls.head==None:
+			cur.prev=cur
+			cur.next=cur
+			cls.head=cur
+			return
+		cur.next=cls.head
+		cur.prev=cls.head.prev
+		cls.head.prev.next=cur
+		cls.head.prev=cur
+		cls.head=cur
 
 SL.create()
+SL.fwd_disp()
+SL.bwd_disp()
+SL.insertbegn()
 SL.fwd_disp()
 SL.bwd_disp()
