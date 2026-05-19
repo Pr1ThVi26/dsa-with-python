@@ -58,6 +58,9 @@ class SL:
 			print("No elements!")
 			return 
 		print("Deleted element: ",cls.head.data)
+		if cls.head.next==cls.head:
+			cls.head=None
+			return
 		temp=cls.head.prev
 		cls.head=cls.head.next
 		temp.next=cls.head	
