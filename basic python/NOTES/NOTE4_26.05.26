@@ -1,0 +1,391 @@
+STACK APPLICATION
+__________________
+
+A+(B*C)/D    infix
+
+
+prefix
+
+A+(B*C)/D 
+
+A +  *BC  /  D
+
+A +    /*BCD
+
++A/*BCD
+
+
+
+A+(B*C)/D    infix
+
+postfix
+______
+
+A + BC*  / D
+A + BC*D/
+
+ABC*D/+
+
+
+A+B*C+(D*E+F)*G   infix
+
+
+prefix
+A+B*C+(D*E+F)*G 
+
+A+B*C + (*DE+F) *G
+
+A+B*C +  +*DEF  * G
+
+A +  *BC  +  *+*DEFG
+
++A*BC +   *+*DEFG
+
+++A*BC*+*DEFFG
+
+
+
+
+A+B*C+(D*E+F)*G   infix
+
+postfix
+
+A+B*C+(D*E+F)*G 
+
+A+B*C + (   DE* + f )  * G
+
+A+B*C +  DE*F+   * G
+
+A+ BC*   +  DE*F+G*
+
+ABC*+   +   DE*F+G*
+
+ABC*+DE*F+G*+
+
+
+
+
+
+infix to postfix
+
+
+A+B*C+(D*E+F)*G   
+
+
+
+
+stack application 
+__________________________
+infix        a+b
+postfix      ab+
+prefix      +ab
+
+infix to postfix
+infix to prefix
+postfix to infix
+prefix to infix
+prefix to postfix
+postfix to prefix
+
+infix evaluation
+postfix 
+prefix
+
+precendce  1   ()
+2 ^
+3           * /
+4           + -
+
+infix 
+________
+A+(B*C)
+
+infix to postfix
+________________________
+A + BC*
+ABC*+
+
+infix to prefix
+______________________
+A + *BC
++A*BC
+
+
+
+(A+B)*C
+
+infix to postfix
+_________________
+AB+ * C
+AB+C*
+
+infix to prefix
+___________________
+(A+B)*C
+
++AB * C
+*+ABC
+
+
+infix  to postfix
+_______________
+(A+B) * (C/D)
+
+AB+ *  CD/
+
+AB+CD/*
+
+infix  to prefix
+(A+B) * (C/D)
++AB  * /CD
+*+AB/CD
+
+
+
+A+(B*C)/D
+__________________
+
+infix to postfix
+__________________
+A+(B*C)/D
+
+A+ BC* / D
+
+A + BC*D/
+ABC*D/+
+
+
+infix to prefix
+__________________
+A+(B*C)/D
+
+A + *BC / D
+
+A + /*BCD
++A/*BCD
+
+
+
+
+A+B*C+(D*E+F)*G
+_____________________
+scanned symbole     stack      postfix
+__________________________________________
+					(
+A                              A
++                   (+              A
+
+B              (+              AB
+*              (+*             AB
+C                              ABC
++              (+              ABC*+
+
+(              (+(                
+
+D                               ABC*+D
+*              (+(*
+
+E                                ABC*+DE
+
++              (+(+              ABC*+DE*
+
+F                                 ABC*+DE*F
+)              (+                   ABC*+DE*F+
+
+*              (+*   
+
+G                                ABC*+DE*F+G
+
+)                                ABC*+DE*F+G*+
+
+
+
+
+
+
+
+(K + L - M*N + (O^P) * W/U/V * T + Q)
+
+
+
+
+
+
+
+scannedsymbole         stack            p
+				(
+
+k			                      k
+
++                       (+
+
+L                                      kL
+-                       (-             kL+
+M                                      kL+M
+*                      (-*             kL+M
+N                                      kL+MN
+
++                      (+              KL+MN*-
+
+(                      (+( 
+
+o                                     KL+MN*-o
+^                      (+(^
+P                                      KL+MN*-oP
+)                      (+              KL+MN*-oP^
+*                      (+*
+W                                      KL+MN*-op^W
+
+/                      (+/            KL+MN*-op^W*
+
+U                                     KL+MN*-op^W*u
+
+/                      (+/                KL+MN*-op^W*U/
+
+V                                         KL+MN*-op^W*U/V
+
+*                      (+*                 KL+MN*-op^W*U/V/
+T                                           KL+MN*-op^W*U/V/T
+
++                       (+                    KL+MN*-op^W*U/V/T*+
+
+Q                                             KL+MN*-op^W*U/V/T*+Q
+)
+
+answer
+
+ KL+MN*-op^W*U/V/T*+Q+
+
+
+
+infix
+
+2+3*5
+
+2 + 3 5 *
+
+2 3 5 * +
+postfix   evaluation
+__________________________
+
+2     2
+3     2,3
+5     2,3,5
+
+*    2  15
++    17
+
+
+
+
+
+
+postfix   evaluation
+___________________________
+
+7 4 3 * 1  5  +  /  * 
+
+7     7
+4     7,4
+3     7,4,3
+
+*    7,12
+1    7,12,1
+5     7,12,1,5
++     7 12 6
+/     7  2
+*     14
+
+
+7             7
+4             7  4
+3             7   4  3
+*             7   12
+1             7    12  1
+5             7    12   1  5
++             7    12   6
+/             7     2
+*             14
+
+
+4   3  2  5  * -  +
+
+4      4
+3      4  3
+2      4  3 2
+5      4  3 2 5
+*      4  3  10
+-      4 -7
++       -3
+
+
+
+infix to prefix
+_________________
+A+(B*C)/D
+
+D/)C*B(+A
+
+      stack       result
+D      )           D
+/      )/
+)      )/)
+C                 DC
+*     )/)*            
+B                 DCB
+(     )/            DCB*
++     )+              DCB*/
+A                     DCB*/A
+(                      DCB*/A+
++A/*BCD
+
+
+
+
+
+infix to prefix
+____________________
+
+A+B*C+(D*E+F)*G
+
+
+G                   G
+*        )*          G
+)         )*)        G
+F         )*)        GF
++         )*)+        GF
+E         )*)+         GFE
+*         )*)+*        GFE
+D         )*)+*        GFED
+(         )*           GFED*+
++         )+            GFED*+*
+C         )+            GFED*+*C
+*         )+*           GFED*+*C
+B         )+*           GFED*+*CB
++         )++           GFED*+*CB*
+A         )++           GFED*+*CB*A
+(                       GFED*+*CB*A++
+
+Ans
+++A*BC*+*DEFG
+
+
+
+infix
+postfix
+prefix
+
+
+infix to postfix
+infiz to prefix
+postfix evaluation
+
+
+prefix evaluation
+infix evaluation
+
+postfix to infix
+postfix to prefix
+
+prefix to infix
+prefix to postfix
