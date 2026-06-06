@@ -5,7 +5,6 @@ class Node:
         self.right = None
 
 class BinaryTree:
-
     def create(self):
         data = int(input("Enter node value (-1 for no node): "))
 
