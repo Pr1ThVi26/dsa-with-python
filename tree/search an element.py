@@ -30,12 +30,12 @@ class BST:
             temp=l.pop()
             if ele==temp.data:
                 print("Element found!")
-            else:
-                print("Element not found")
+                return
             if temp.right!=None:
-                l.append(temp.right)
+               l.append(temp.right)
             if temp.left!=None:
                 l.append(temp.left)
+        print("Element not found!")
 
 tree = BST()
 root=None
