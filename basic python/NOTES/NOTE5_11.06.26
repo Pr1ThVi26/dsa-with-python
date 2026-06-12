@@ -1,0 +1,333 @@
+Breadth-First Search (BFS) is a graph traversal algorithm that explores nodes layer by layer. In BFS, starting from a selected node (or root node), we explore all its adjacent (neighboring) nodes before moving deeper into the graph. This traversal technique uses a queue data structure to keep track of nodes to be visited next. Here’s a step-by-step explanation:
+
+Step-by-Step Process of BFS:
+
+Initialization:
+Choose a starting node (the root node for traversal).
+Initialize a queue and enqueue the starting node.
+Mark this node as visited.
+
+Visit Neighbors:
+Dequeue the front node of the queue and examine it.
+For each unvisited neighbor of this node, mark it as visited and enqueue it into the queue.
+
+Repeat:
+Repeat the dequeue, visit, and enqueue steps until the queue is empty, meaning all nodes connected to the starting node have been visited.
+
+End:
+When the queue is empty, BFS traversal is complete.
+Example Walkthrough
+Imagine a graph with the following structure, with edges between nodes A, B, C, D, E, and F:
+
+mathematica
+Copy code
+       A
+      / \
+     B   C
+    /|   |
+   D E   F
+Suppose we start BFS traversal at node A.
+
+Step 1: Start at A. Enqueue A and mark it as visited.
+
+Queue: [A]
+
+Step 2: Dequeue A, visit it, and enqueue its neighbors B and C.
+
+Visited Order: A
+
+Queue: [B, C]
+
+Step 3: Dequeue B, visit it, and enqueue its unvisited neighbors D and E.
+
+Visited Order: A, B
+
+Queue: [C, D, E]
+
+Step 4: Dequeue C, visit it, and enqueue its unvisited neighbor F.
+
+Visited Order: A, B, C
+
+Queue: [D, E, F]
+
+Step 5: Dequeue D and visit it. D has no unvisited neighbors, so move on.
+
+Visited Order: A, B, C, D
+
+Queue: [E, F]
+
+Step 6: Dequeue E and visit it. E has no unvisited neighbors.
+
+Visited Order: A, B, C, D, E
+
+Queue: [F]
+
+Step 7: Dequeue F and visit it. F has no unvisited neighbors.
+
+Visited Order: A, B, C, D, E, F
+
+Queue: [] (empty)
+
+End: The queue is empty, and BFS traversal is complete.
+
+BFS Key Points
+Layer-by-layer traversal: BFS explores all nodes at the current depth before moving deeper.
+Queue usage: Ensures that nodes are visited in the correct order.
+Applications: BFS is useful for finding the shortest path in unweighted graphs, discovering connected components, and level-order traversal in trees.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX 10 // Maximum number of vertices
+
+// Structure to represent a node in an adjacency list
+struct Node {
+    int vertex;
+    struct Node* next;
+};
+
+// Structure to represent a graph
+struct Graph {
+    int numVertices;
+    struct Node* adjLists[MAX];
+    int visited[MAX];
+};
+
+// Queue structure for BFS
+struct Queue {
+    int items[MAX];
+    int front;
+    int rear;
+};
+
+// Function prototypes
+struct Node* createNode(int);
+struct Graph* createGraph(int);
+void addEdge(struct Graph*, int, int);
+void bfs(struct Graph*, int);
+struct Queue* createQueue();
+void enqueue(struct Queue*, int);
+int dequeue(struct Queue*);
+int isEmpty(struct Queue*);
+
+int main() {
+    int vertices, edges, startVertex;
+    int u, v;
+
+    printf("Enter the number of vertices: ");
+    scanf("%d", &vertices);
+    
+    struct Graph* graph = createGraph(vertices);
+
+    printf("Enter the number of edges: ");
+    scanf("%d", &edges);
+     int i;
+    for ( i = 0; i < edges; i++) {
+        printf("Enter the edge (u v): ");
+        scanf("%d %d", &u, &v);
+        addEdge(graph, u, v);
+    }
+
+    printf("Enter the starting vertex for BFS: ");
+    scanf("%d", &startVertex);
+
+    printf("BFS Traversal: ");
+    bfs(graph, startVertex);
+
+    return 0;
+}
+
+// Create a new node
+struct Node* createNode(int v) {
+    struct Node* newNode = malloc(sizeof(struct Node));
+    newNode->vertex = v;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Create a graph with the specified number of vertices
+struct Graph* createGraph(int vertices) {
+    struct Graph* graph = malloc(sizeof(struct Graph));
+    graph->numVertices = vertices;
+    int i;
+    for (i = 0; i < vertices; i++) {
+        graph->adjLists[i] = NULL;
+        graph->visited[i] = 0;
+    }
+
+    return graph;
+}
+
+
+// Add an undirected edge to the graph
+void addEdge(struct Graph* graph, int u, int v) {
+    struct Node* newNode = createNode(v);
+    newNode->next = graph->adjLists[u];
+    graph->adjLists[u] = newNode;
+
+    newNode = createNode(u);
+    newNode->next = graph->adjLists[v];
+    graph->adjLists[v] = newNode;
+}
+
+// Create a queue
+struct Queue* createQueue() {
+    struct Queue* queue = malloc(sizeof(struct Queue));
+    queue->front = -1;
+    queue->rear = -1;
+    return queue;
+}
+
+// Check if the queue is empty
+int isEmpty(struct Queue* queue) {
+    return queue->front == -1;
+}
+
+// Add an element to the queue
+void enqueue(struct Queue* queue, int value) {
+    if (queue->rear == MAX - 1) {
+        printf("Queue is full\n");
+        return;
+    } else {
+        if (queue->front == -1) queue->front = 0;
+        queue->items[++queue->rear] = value;
+    }
+}
+
+// Remove an element from the queue
+int dequeue(struct Queue* queue) {
+    int item;
+    if (isEmpty(queue)) {
+        printf("Queue is empty\n");
+        return -1;
+    } else {
+        item = queue->items[queue->front];
+        if (queue->front >= queue->rear) { // Reset the queue after last dequeue
+            queue->front = -1;
+            queue->rear = -1;
+        } else {
+            queue->front++;
+        }
+        return item;
+    }
+}
+
+// BFS traversal
+void bfs(struct Graph* graph, int startVertex) {
+    struct Queue* queue = createQueue();
+
+    graph->visited[startVertex] = 1;
+    enqueue(queue, startVertex);
+
+    while (!isEmpty(queue)) {
+        int currentVertex = dequeue(queue);
+        printf("%d ", currentVertex);
+
+        struct Node* temp = graph->adjLists[currentVertex];
+
+        while (temp) {
+            int adjVertex = temp->vertex;
+
+            if (graph->visited[adjVertex] == 0) {
+                graph->visited[adjVertex] = 1;
+                enqueue(queue, adjVertex);
+            }
+            temp = temp->next;
+        }
+    }
+}
+
+Let’s walk through a step-by-step example using the DFS iterative approach on a sample graph.
+
+Example Graph Structure
+Consider the following graph:
+
+plaintext
+Copy code
+     A
+    / \
+   B   C
+  / \   \
+ D   E   F
+      \
+       G
+We can represent this graph as an adjacency list (dictionary) in Python:
+
+python
+Copy code
+graph = {'A': ['B', 'C'],'B': ['D', 'E'], 'C': ['F'], 'D': [], 'E': ['G'], 'F': [], 'G': []}
+
+Step-by-Step DFS Iterative Walkthrough
+Let’s perform DFS starting from node 'A' and trace each step.
+
+Initial Setup
+Stack: ['A'] (Start with the root node)
+Visited Set: {} (Empty initially)
+Step-by-Step Execution
+
+Pop 'A' from Stack:
+Stack: []
+Visited Set: {'A'}
+Process 'A': Print 'A'.
+Push Neighbors of 'A' (C, B) to Stack: Add 'C' and 'B' in reverse order so that 'B' is on top.
+
+After this step:
+Stack: ['C', 'B']
+
+Pop 'B' from Stack:
+Stack: ['C']
+Visited Set: {'A', 'B'}
+Process 'B': Print 'B'.
+Push Neighbors of 'B' (E, D) to Stack: Add 'E' and 'D' in reverse order so that 'D' is on top.
+
+After this step:
+Stack: ['C', 'E', 'D']
+
+Pop 'D' from Stack:
+Stack: ['C', 'E']
+Visited Set: {'A', 'B', 'D'}
+Process 'D': Print 'D'.
+D has no neighbors, so we don't add anything to the stack.
+
+After this step:
+Stack: ['C', 'E']
+
+Pop 'E' from Stack:
+Stack: ['C']
+Visited Set: {'A', 'B', 'D', 'E'}
+Process 'E': Print 'E'.
+Push Neighbor of 'E' (G) to Stack.
+
+After this step:
+Stack: ['C', 'G']
+
+Pop 'G' from Stack:
+Stack: ['C']
+Visited Set: {'A', 'B', 'D', 'E', 'G'}
+Process 'G': Print 'G'.
+G has no neighbors, so we don't add anything to the stack.
+
+After this step:
+Stack: ['C']
+
+Pop 'C' from Stack:
+Stack: []
+Visited Set: {'A', 'B', 'D', 'E', 'G', 'C'}
+Process 'C': Print 'C'.
+Push Neighbor of 'C' (F) to Stack.
+
+After this step:
+Stack: ['F']
+
+Pop 'F' from Stack:
+Stack: []
+Visited Set: {'A', 'B', 'D', 'E', 'G', 'C', 'F'}
+Process 'F': Print 'F'.
+F has no neighbors, so the stack remains empty.
+
+Final State
+Stack: [] (empty, so we stop)
+Visited Order: A B D E G C F
+
+Output
+The nodes were processe'd in this DFS order: A, B, D, E, G, C, F.
