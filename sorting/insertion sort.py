@@ -1,5 +1,5 @@
-#[24, 19, 36, 27, 29]
-#[19, 24, 27, 29, 36]
+#list=[24, 19, 36, 27, 29]
+#sort=[19, 24, 27, 29, 36]
 l=[0]*5
 for i in range(len(l)):
 	ele=int(input("Enter element : "))
